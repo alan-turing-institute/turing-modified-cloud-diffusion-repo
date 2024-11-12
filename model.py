@@ -32,7 +32,7 @@ class TuringCloudDiffusionModel(AbstractModel):
         # Here you can add any other parameters that you need to initialize your model
         # You might load your trained ML model or set up an optical flow method here.
         # You can also access any code from src/turing_modified_cloud_diffusion_repo, e.g.
-        x = turing_modified_cloud_diffusion_repo.load_model()
+        #x = turing_modified_cloud_diffusion_repo.load_model()
 
         ############################
 

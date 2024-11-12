@@ -1,7 +1,7 @@
 model:
   name: "TuringCloudDiffusionModel"
   params:
-    history_steps: 1
+    history_steps: 3
     model_path: "manchester_prize/ddpm_clouds/bcpp9bf9_unet_small:v0"
 validation:
   data_path: "/bask/projects/v/vjgo8416-climate/shared/data/eumetsat/testing2022/2022_test_nonhrv.zarr"
