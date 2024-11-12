@@ -123,10 +123,10 @@ class TuringCloudDiffusionModel(AbstractModel):
                 sequences = forecast(model_eval)
 
                 #trim to predicted frames (last 12)
-                predicted_frames = sequence[:,4:,:,:] 
+                predicted_frames = [tensor[:,-12:,:,:] for tensor in sequences]
                     
                 #STEP 3: Resize images back to original size and shape
-                resize_transform = T.Resize((372,372)) #restore cropped images back to original resolution
+                resize_transform = T.Resize((372,372)) 
                 resized_frames = [resize_transform(tensor) for tensor in predicted_frames]
                 #STEP 4: Concatenate results into array of size [batch, channels, height, width]
                 channel_list.append(resized_frames)
